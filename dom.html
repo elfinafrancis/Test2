@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+	<h1>Techovid registration details</h1>
+    <button type="button" onclick="loadXML()">Get details</button>
+    <br><br>
+    <table id="demo"></table>
+    <script>
+        function loadXML()
+        {
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4&&this.status==200)
+                {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET","test2.xml",false);
+            xhttp.send();
+        }
+        function myFunction(xml)
+        {
+            var i;
+            var xmlDoc=xml.responseXML;
+            var t="<tr><th>NAME</th><th>BRANCH</th><th>COLLEGE</th><th>EMAIL</th></tr>";
+            var x=xmlDoc.getElementsByTagName("CS");
+            for(i=0;i<x.length;i++)
+            {
+                t +="<tr><td>" +
+                x[i].getElementsByTagName("STU-NAME")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("STU-BRANCH")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("STU-COLLEGE")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("STU-EMAIL")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML=t;
+        }
+
+    </script>
+</body>
+</html>
