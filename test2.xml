@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CHRIST>
+	<CS>
+		<STU-NAME>Elsa</STU-NAME>
+		<STU-BRANCH>Computer Science</STU-BRANCH>
+		<STU-COLLEGE>St. Joseph's College of Arts and Science</STU-COLLEGE>
+		<STU-EMAIL>elsa@science.josephs.in</STU-EMAIL>
+	</CS>
+	<CS>
+		<STU-NAME>Athira</STU-NAME>
+		<STU-BRANCH>Computer Science</STU-BRANCH>
+		<STU-COLLEGE>Kristu Jayanti College</STU-COLLEGE>
+		<STU-EMAIL>athira@science.kjc.in</STU-EMAIL>
+	</CS>
+	<CS>
+		<STU-NAME>Johan</STU-NAME>
+		<STU-BRANCH>Computer Science</STU-BRANCH>
+		<STU-COLLEGE>St. Joseph's College of Arts and Science</STU-COLLEGE>
+		<STU-EMAIL>johan@science.josephs.in</STU-EMAIL>
+	</CS>
+</CHRIST>
