@@ -8,6 +8,7 @@
 <body>
 	<h1>Techovid registration details</h1>
     <button type="button" onclick="loadXML()">Get details</button>
+    <button type="button" onclick="getXML()">Student details</button>
     <br><br>
     <table id="demo"></table>
     <script>
@@ -40,6 +41,37 @@
                 x[i].getElementsByTagName("STU-COLLEGE")[0].childNodes[0].nodeValue +
                 "</td><td>" +
                 x[i].getElementsByTagName("STU-EMAIL")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML=t;
+        }
+
+        function getXML()
+        {
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4&&this.status==200)
+                {
+                    myData(this);
+                }
+            };
+            xhttp.open("GET","test2.xml",false);
+            xhttp.send();
+        }
+
+        function myData(xml)
+        {
+            var i;
+            var xmlDoc=xml.responseXML;
+            var t="<tr><th>NAME</th><th>COLLEGE</th></tr>";
+            var x=xmlDoc.getElementsByTagName("CS");
+            for(i=0;i<x.length;i++)
+            {
+                t +="<tr><td>" +
+                x[i].getElementsByTagName("STU-NAME")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("STU-COLLEGE")[0].childNodes[0].nodeValue +
                 "</td></tr>";
             }
             document.getElementById("demo").innerHTML=t;
