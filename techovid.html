@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Techovid 2020</title>
 	<script type="text/javascript">
 		var myCookies = {};
@@ -57,7 +58,7 @@ function validation()
   myCookies["_age"] = document.getElementById("age").value;
   myCookies["_phone"] = document.getElementById("phone").value;
   myCookies["_username"] = document.getElementById("username").value;
-  myCookies["_password"] = document.getElementById("password").value;
+  myCookies["_pasword"] = document.getElementById("password").value;
   myCookies["_confirm_password"] = document.getElementById("confirm_password").value;
   
     if (name.value == "")                                  
@@ -66,42 +67,36 @@ function validation()
         name.focus();
         return false;
     }
-
     if (email.value == "")                                  
     {
         window.alert("Please enter your e-mail ID");
         email.focus();
         return false;
     }
-
-   if (branch.value == "")                                  
+    if (branch.value == "")                                  
     {
         window.alert("Please enter your branch");
         branch.focus();
         return false;
     }
-
     if (college.value == "")                                  
     {
         window.alert("Please enter the name of your institution");
         college.focus();
         return false;
     }
-
     if (state.value == "")                                  
     {
         window.alert("Please enter your state");
         state.focus();
         return false;
     }
-
     if (address.value == "")                                  
     {
         window.alert("Please enter your address");
         address.focus();
         return false;
     }
-
     if (age.value == "")                                  
     {
         window.alert("Please enter your age");
@@ -114,22 +109,19 @@ function validation()
         window.alert("Please enter your phone number.");
         phone.focus();
         return false;
-    }
-       
+    }  
     if (username.value == "")                                  
     {
         window.alert("Please enter your username");
         username.focus();
         return false;
     }
-
     if (password.value == "")                        
     {
         window.alert("Please set your password");
         password.focus();
         return false;
     }
-
     if (confirm_password.value == "")                        
     {
         window.alert("Please confirm your password");
@@ -138,11 +130,11 @@ function validation()
     }
     return true;
 }
-	</script>
+</script>
 </head>
 <body>
 	<h1>Registration form</h1>
-    <form class=container name="Form" action="/submit.php" onsubmit="return validation()" method="post">
+    <form class=container name="Form" action="/submit.php" onsubmit = "return validation()" method="post">
 <p>Name<br><input type="text" id="name" placeholder="Name"></p></br>
 <p>Email ID<br><input type="email" id="email" placeholder="Email ID"></p></br>
 <p>Branch<br><input type="text" id="branch" placeholder="Branch"></p></br>
@@ -152,7 +144,7 @@ function validation()
 <p>Age<br><input type="tel" id="age" placeholder="Age" title="Must be a positive number"></p></br>
 <p>Phone Number<br><input type="tel" id="phone" placeholder="Phone number" pattern="[0-9]{10}" title="Must contain 10 digits"></p></br>
 <p>Username<br><input type="text" id="user" placeholder="username" title="Must begin with a capital letter"></p></br>
-<p>Password<br><input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one lowercase letter, one uppercase letter, one number, and at least 8 or more characters"></p></br>
+<p>Password<br><input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one lowercase letter, one uppercase letter, one number, and at least 5 characters"></p></br>
 <p>Confirm Password<br><input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password" onkeyup='confirm();'></p>
 <span id='message'></span>
 <br>
