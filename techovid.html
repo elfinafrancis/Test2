@@ -58,7 +58,7 @@ function validation()
   myCookies["_age"] = document.getElementById("age").value;
   myCookies["_phone"] = document.getElementById("phone").value;
   myCookies["_username"] = document.getElementById("username").value;
-  myCookies["_pasword"] = document.getElementById("password").value;
+  myCookies["_password"] = document.getElementById("password").value;
   myCookies["_confirm_password"] = document.getElementById("confirm_password").value;
   
     if (name.value == "")                                  
@@ -130,12 +130,11 @@ function validation()
     }
     return true;
 }
-
 </script>
 </head>
 <body>
 <h1>Registration form</h1>
-<form class=container name="Form" onsubmit = "return validation()" method="post">
+<form class=container name="Form" action="/submit.php" onsubmit = "return validation()" method="post">
 <p>Name<br><input type="text" id="name" placeholder="Name"></p></br>
 <p>Email ID<br><input type="email" id="email" placeholder="Email ID"></p></br>
 <p>Branch<br><input type="text" id="branch" placeholder="Branch"></p></br>
