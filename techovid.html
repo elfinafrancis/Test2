@@ -36,17 +36,6 @@ function loadCookies()
   document.getElementById("phone").value = myCookies["_phone"];
 }
 
-var confirm = function() {
-  if (document.getElementById('password').value ==
-    document.getElementById('confirm_password').value) {
-    document.getElementById('message').style.color = 'green';
-    document.getElementById('message').innerHTML = 'PASSWORDS MATCH';
-  } else {
-    document.getElementById('message').style.color = 'red';
-    document.getElementById('message').innerHTML = 'PASSWORDS DO NOT MATCH';
-  }
-}
-
 function validation()                                    
 {
   myCookies["_name"] = document.getElementById("name").value;
@@ -130,6 +119,18 @@ function validation()
     }
     return true;
 }
+
+var confirm = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'PASSWORDS MATCH';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'PASSWORDS DO NOT MATCH';
+  }
+}
+
 </script>
 </head>
 <body>
